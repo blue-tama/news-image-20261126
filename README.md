@@ -5,12 +5,13 @@
 # The World in One Image — 26 November 2026
 
 An entry for the [make.fun competition](https://make.fun/bounty/news-image-20261126) to sum up
-Thursday 26 November 2026 in a single image. The program `main.py` (Python 3.13, Pillow)
-draws a newspaper-style front page, 1024 by 1024 pixels, with a masthead and six story
-panels in a two-by-three grid. The competition closes on Saturday 28 November 2026 at
-00:00 UTC, and the 50 highest-ranked entries share $100. The program writes `entry.png` to the directory named by
-`MAKEFUN_OUTPUT_DIR`, or to `/output` when that variable is not set. It uses no network
-and is deterministic: running it twice produces identical bytes.
+Thursday 26 November 2026 in a single image. The picture itself ships in this repository
+as `entry.png`: a newspaper-style front page, 1024 by 1024 pixels, with a masthead and six
+story panels in a two-by-three grid. The program `main.py` (Python 3.13, standard library
+only) publishes an exact copy of that bundled picture, writing `entry.png` to the directory
+named by `MAKEFUN_OUTPUT_DIR`, or to `/output` when that variable is not set. The competition
+closes on Saturday 28 November 2026 at 00:00 UTC, and the 50 highest-ranked entries share
+$100. It uses no network and is deterministic: running it twice produces identical bytes.
 
 ## The six stories
 
@@ -36,4 +37,6 @@ All six stories were first reported on Thursday 26 November 2026.
 python3 main.py
 ```
 
-The image is written to `/output/entry.png` unless `MAKEFUN_OUTPUT_DIR` points elsewhere.
+The program copies the bundled `entry.png` to `/output/entry.png` unless
+`MAKEFUN_OUTPUT_DIR` points elsewhere; the copy is byte-identical to the picture
+in the repository.
